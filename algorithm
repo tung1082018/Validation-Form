@@ -1,0 +1,110 @@
+
+const myArr = [3, 5, 65, 67];
+console.log('Array; ', myArr)
+//find max of array
+
+function findMax(arr) {
+    var max = arr[0];
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+};
+
+console.log('Max need find: ',findMax(myArr));
+
+
+//find min of array
+
+function findMin(arr){
+    var min = arr[0];
+    for(var i = 0; i < min.length; i++){
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+console.log('Min need find: ',findMin(myArr));
+
+//find a number divisible by 7 but not divisible by 5: chia het cho 5 nhung khong chia het cho 7
+
+function div() {
+    var result = [];
+    for (var i = 10; i < 201; i++){
+        if(i % 7 == 0 && i % 5 !== 0) {
+             result.push(i);
+        }
+    }
+    return result;
+}
+
+console.log('Result: ', div());
+
+
+//factorial: Giai thua
+
+
+function factorial(i) {
+     if(i > 0) {
+        return i * (i-1);
+     }
+     else {
+        return 1;
+     }
+}
+
+var num = 5;
+console.log('Result: ',factorial(5))
+
+//output i;i*i
+
+function put(n) {
+    var result = [];
+    for (var i = 1; i < n; i ++) {
+        result[i] = i*i;
+    }
+    return result;
+}
+const n = 8;
+console.log('Result: ',put(n));
+
+//ax2 + bx +c = 0
+
+function del(a, b, c) {
+    const delta = b * b - 4 * a * c;
+
+    if (delta > 0) {
+        const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+        const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+        return [x1, x2];
+    } else if (delta === 0) {
+        const x = -b / (2 * a);
+        return [x];
+    } else {
+        return [];
+    }
+}
+
+const a = 1;
+const b = -3;
+const c = 2;
+console.log("Result: ", del(a, b, c));
+
+
+//fibonaci
+
+function fibonaci(u) {
+    const results = [0,1];
+    for(let j = 2; j < u; j++) {
+        const next = results[j - 1] + results[j -2];
+        results.push[next];
+    }
+    return results;
+}
+const u = 13;
+console.log('Result: ', fibonaci(u));
+
